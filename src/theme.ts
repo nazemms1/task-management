@@ -1,0 +1,75 @@
+import { createTheme } from "@mantine/core";
+
+export const theme = createTheme({
+  primaryColor: "blue",
+  defaultRadius: "md",
+  fontFamily:
+    "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+  headings: {
+    fontFamily:
+      "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+  },
+  colors: {
+    blue: [
+      "#eff6ff",
+      "#dbeafe",
+      "#bfdbfe",
+      "#93c5fd",
+      "#60a5fa",
+      "#3b82f6",
+      "#2563eb",
+      "#1d4ed8",
+      "#1e40af",
+      "#1e3a8a",
+    ],
+    gray: [
+      "#f8f9fa",
+      "#f1f3f4",
+      "#e9ecef",
+      "#dee2e6",
+      "#ced4da",
+      "#adb5bd",
+      "#6c757d",
+      "#495057",
+      "#343a40",
+      "#212529",
+    ],
+    green: [
+      "#f0fdf4",
+      "#dcfce7",
+      "#bbf7d0",
+      "#86efac",
+      "#4ade80",
+      "#22c55e",
+      "#16a34a",
+      "#15803d",
+      "#166534",
+      "#14532d",
+    ],
+    red: [
+      "#fef2f2",
+      "#fecaca",
+      "#fca5a5",
+      "#f87171",
+      "#ef4444",
+      "#dc2626",
+      "#f56565",
+      "#e53e3e",
+      "#c53030",
+      "#991b1b",
+    ],
+  },
+  shadows: {
+    xs: "0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)",
+    sm: "0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)",
+    md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+  },
+  spacing: {
+    xs: "8px",
+    sm: "12px",
+    md: "16px",
+    lg: "20px",
+    xl: "24px",
+  },
+});

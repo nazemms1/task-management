@@ -1,69 +1,104 @@
-# React + TypeScript + Vite
+# Task Management Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+This is a simple task management project I built using React with TypeScript. Its purpose is to organize daily tasks and manage teams effectively.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I started this project to solve a personal problem in organizing tasks, and it evolved to become a complete system that can be used in different environments.
 
-## Expanding the ESLint configuration
+## Available Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Dashboard**: Display task statistics and progress
+- **Task Management**: Add, edit, and delete tasks
+- **User Management**: View, add, edit, and delete user information
+- **Reusable Tables**: Display data in an organized manner
+- **Responsive Design**: Works on mobile and desktop
+- **Excel File Import**: Ability to import data from Excel files
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technologies Used
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+I chose these technologies after experimentation and research:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Foundation:**
+- React 19.1.0 - for interactive interfaces
+- TypeScript - for safer code and easier maintenance
+- Vite - for fast building during development
+
+**Data Management:**
+- Redux Toolkit - for application state management
+- React Redux - connecting Redux with React
+
+**User Interface:**
+- Mantine - ready-made and beautiful component library
+- Tabler Icons - diverse icon collection
+
+**Helper Tools:**
+- Day.js - for handling dates
+- XLSX - for reading Excel files
+- React Router - for navigation between pages
+
+## How to Run the Project
+
+### Requirements
+- Node.js (version 18 or newer)
+- npm or yarn
+
+### Running Steps
+
+1. **Download the project**
+```bash
+git clone https://github.com/nazemms1/task-management.git
+cd task-management
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Install dependencies**
+```bash
+npm install
 ```
+
+3. **Run the project**
+```bash
+npm run dev
+```
+
+4. **Build for production**
+```bash
+npm run build
+```
+
+## File Structure
+
+```
+src/
+├── components/          
+│   ├── Dashboard/        
+│   ├── Layout/           
+│   ├── Table/           
+│   ├── Tasks/           
+│   └── Users/           
+├── pages/               
+├── services/             
+├── store/               
+├── types/                
+├── hooks/                 
+├── constants/           
+└── utils/              
+```
+
+## Available NPM Commands
+
+- `npm run dev` - run local server
+- `npm run build` - build the project
+- `npm run preview` - preview the build
+- `npm run lint` - check code quality
+
+## Important Development Points
+
+### Choosing Mantine
+I chose Mantine because it provides ready-made and beautiful components, and significantly reduces development time.
+
+### Using TypeScript
+TypeScript helped me a lot in avoiding errors and making the code clearer, especially in large projects.
+
+### Redux Toolkit
+I used it to manage the global state of the application, especially shared user and task data.
